@@ -1,0 +1,2034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Agriculture — Smart Agriculture & Seeds Market</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Apple SF Pro / Inter Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=SF+Pro+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['-apple-system', 'BlinkMacSystemFont', '"SF Pro Display"', '"SF Pro Text"', '"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            liquid: {
+              emerald: '#10b981',
+              cyan: '#06b6d4',
+              teal: '#14b8a6',
+              mint: '#34d399',
+              gold: '#fbbf24',
+              obsidian: '#07090e',
+            }
+          },
+          animation: {
+            'blob-float': 'blobFloat 18s ease-in-out infinite alternate',
+            'blob-float-reverse': 'blobFloatReverse 22s ease-in-out infinite alternate',
+            'shimmer': 'shimmer 3s ease-in-out infinite',
+            'pulse-subtle': 'pulseSubtle 3s ease-in-out infinite',
+            'island-pulse': 'islandPulse 2s ease-in-out infinite',
+          },
+          keyframes: {
+            blobFloat: {
+              '0%': { transform: 'translate(0px, 0px) scale(1)' },
+              '50%': { transform: 'translate(40px, -60px) scale(1.12)' },
+              '100%': { transform: 'translate(-30px, 40px) scale(0.92)' }
+            },
+            blobFloatReverse: {
+              '0%': { transform: 'translate(0px, 0px) scale(1.08)' },
+              '50%': { transform: 'translate(-50px, 50px) scale(0.95)' },
+              '100%': { transform: 'translate(35px, -35px) scale(1.15)' }
+            },
+            shimmer: {
+              '0%': { transform: 'translateX(-100%)' },
+              '100%': { transform: 'translateX(200%)' }
+            },
+            pulseSubtle: {
+              '0%, 100%': { opacity: '0.85', transform: 'scale(1)' },
+              '50%': { opacity: '1', transform: 'scale(1.02)' }
+            },
+            islandPulse: {
+              '0%, 100%': { borderColor: 'rgba(255, 255, 255, 0.15)' },
+              '50%': { borderColor: 'rgba(16, 185, 129, 0.45)' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Apple Liquid Glass Styling Tokens */
+    :root {
+      --glass-bg: rgba(255, 255, 255, 0.05);
+      --glass-border: rgba(255, 255, 255, 0.12);
+      --glass-border-specular: rgba(255, 255, 255, 0.35);
+      --glass-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.6);
+    }
+
+    body {
+      background-color: #05070c;
+      color: #f1f5f9;
+      font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    }
+
+    /* Ultra-Refractive Liquid Glass Surfaces */
+    .liquid-glass {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+      backdrop-filter: blur(28px) saturate(190%);
+      -webkit-backdrop-filter: blur(28px) saturate(190%);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.5), inset 0 1px 1px 0 rgba(255, 255, 255, 0.3);
+    }
+
+    .liquid-glass-elevated {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.03) 100%);
+      backdrop-filter: blur(36px) saturate(210%);
+      -webkit-backdrop-filter: blur(36px) saturate(210%);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      box-shadow: 0 24px 60px -12px rgba(0, 0, 0, 0.7), inset 0 1px 1px rgba(255, 255, 255, 0.45), inset 0 -1px 1px rgba(0, 0, 0, 0.3);
+    }
+
+    .liquid-glass-card {
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.015) 100%);
+      backdrop-filter: blur(24px) saturate(180%);
+      -webkit-backdrop-filter: blur(24px) saturate(180%);
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.45), inset 0 1px 0 0 rgba(255, 255, 255, 0.25);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .liquid-glass-card:hover {
+      border-color: rgba(52, 211, 153, 0.35);
+      box-shadow: 0 20px 45px -10px rgba(16, 185, 129, 0.2), inset 0 1px 1px 0 rgba(255, 255, 255, 0.4);
+      transform: translateY(-2px);
+    }
+
+    /* Apple Metallic Hologram Card */
+    .apple-titanium-card {
+      background: linear-gradient(125deg, rgba(16, 185, 129, 0.35) 0%, rgba(6, 182, 212, 0.2) 40%, rgba(15, 23, 42, 0.8) 100%);
+      backdrop-filter: blur(40px) saturate(200%);
+      -webkit-backdrop-filter: blur(40px) saturate(200%);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 25px 60px -15px rgba(16, 185, 129, 0.35), inset 0 1px 2px rgba(255, 255, 255, 0.6);
+      position: relative;
+      overflow: hidden;
+    }
+    .apple-titanium-card::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.18) 0%, transparent 60%);
+      pointer-events: none;
+      transform: rotate(25deg);
+    }
+
+    /* Dynamic Island Pill */
+    .dynamic-island {
+      background: rgba(0, 0, 0, 0.75);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(30px);
+      -webkit-backdrop-filter: blur(30px);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .dynamic-island.expanded {
+      width: 92% !important;
+      padding: 10px 16px !important;
+      background: rgba(4, 12, 22, 0.9) !important;
+      border-color: rgba(52, 211, 153, 0.4) !important;
+      box-shadow: 0 20px 40px -10px rgba(16, 185, 129, 0.4) !important;
+    }
+
+    /* Apple Floating Glass Dock */
+    .floating-glass-dock {
+      background: rgba(10, 15, 26, 0.65);
+      backdrop-filter: blur(32px) saturate(200%);
+      -webkit-backdrop-filter: blur(32px) saturate(200%);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.7), inset 0 1px 1px rgba(255, 255, 255, 0.25);
+    }
+
+    /* Glass Input fields */
+    .glass-input {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      backdrop-filter: blur(16px);
+      transition: all 0.25s ease;
+    }
+    .glass-input:focus {
+      background: rgba(255, 255, 255, 0.09);
+      border-color: rgba(52, 211, 153, 0.6);
+      box-shadow: 0 0 20px -3px rgba(16, 185, 129, 0.35);
+      outline: none;
+    }
+
+    /* iOS Glass Pill Button */
+    .glass-btn-primary {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.4);
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .glass-btn-primary:active {
+      transform: scale(0.97);
+      box-shadow: 0 5px 15px -3px rgba(16, 185, 129, 0.4);
+    }
+
+    /* Custom iOS Smooth Scrollbar */
+    ::-webkit-scrollbar {
+      width: 3px;
+      height: 3px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 9999px;
+    }
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col items-center justify-start sm:p-4 select-none relative overflow-x-hidden">
+
+  <!-- ============================================== -->
+  <!-- AMBIENT LIQUID GLASS LIGHT BLOBS (Background)  -->
+  <!-- ============================================== -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+    <div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-emerald-500/20 blur-[100px] animate-blob-float"></div>
+    <div class="absolute top-1/4 -right-32 w-[28rem] h-[28rem] rounded-full bg-cyan-500/18 blur-[110px] animate-blob-float-reverse"></div>
+    <div class="absolute bottom-1/3 left-1/4 w-80 h-80 rounded-full bg-teal-400/15 blur-[95px] animate-blob-float"></div>
+    <div class="absolute -bottom-32 right-1/4 w-96 h-96 rounded-full bg-amber-400/12 blur-[105px] animate-blob-float-reverse"></div>
+    <!-- Fine noise overlay for physical frosted glass feel -->
+    <div class="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+  </div>
+
+  <!-- ============================================== -->
+  <!-- MAIN APP CONTAINER (iOS Device Simulation)     -->
+  <!-- ============================================== -->
+  <div id="appContainer" class="w-full max-w-md sm:max-w-lg min-h-screen sm:min-h-[880px] bg-[#070b13]/80 backdrop-blur-3xl sm:rounded-[40px] shadow-[0_30px_100px_rgba(0,0,0,0.85)] overflow-hidden flex flex-col relative border border-white/10 z-10">
+    
+    <!-- TOP STATUS BAR & DYNAMIC ISLAND (Apple Style) -->
+    <header class="sticky top-0 z-40 px-5 pt-3 pb-2.5 flex flex-col items-center bg-[#070b13]/60 backdrop-blur-2xl border-b border-white/[0.08]">
+      
+      <!-- iOS Clock & Status Row -->
+      <div class="w-full flex items-center justify-between text-xs text-white/70 font-semibold mb-1 tracking-tight">
+        <span id="iosClock" class="text-xs font-mono font-medium tracking-normal text-white">09:41</span>
+        
+        <!-- Apple Dynamic Island Pill -->
+        <div id="dynamicIsland" class="dynamic-island w-28 h-6 rounded-full flex items-center justify-center px-2 space-x-1.5 cursor-pointer shadow-inner transition-all duration-300">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+          <span id="islandLabel" class="text-[10px] font-medium text-emerald-200 tracking-wider">IoT AgriNet</span>
+        </div>
+
+        <div class="flex items-center space-x-1.5 text-white/80 text-[11px]">
+          <i class="fa-solid fa-signal text-[10px]"></i>
+          <span class="text-[9px] font-mono">5G</span>
+          <i class="fa-solid fa-wifi text-[10px]"></i>
+          <div class="flex items-center space-x-0.5">
+            <span class="text-[10px] font-mono">98%</span>
+            <i class="fa-solid fa-battery-full text-emerald-400 text-xs"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- App Title Bar -->
+      <div class="w-full flex items-center justify-between pt-1">
+        <div class="flex items-center space-x-2.5">
+          <div class="w-8 h-8 rounded-2xl liquid-glass flex items-center justify-center text-emerald-300 shadow-sm border border-white/20">
+            <i class="fa-solid fa-wheat-awn text-sm"></i>
+          </div>
+          <div>
+            <h1 class="text-sm font-bold tracking-tight text-white flex items-center space-x-1.5">
+              <span>Kaveri Seeds Market</span>
+              <span class="text-[9px] px-1.5 py-0.2 bg-emerald-500/20 text-emerald-300 rounded-full border border-emerald-500/30 font-mono">PRO</span>
+            </h1>
+            <p class="text-[9px] text-white/50 tracking-wide uppercase font-medium">Apple Liquid IoT Platform</p>
+          </div>
+        </div>
+        
+        <div class="flex items-center space-x-1.5">
+          <button onclick="toggleAudioFeedback()" id="audioToggleBtn" class="w-7 h-7 rounded-full liquid-glass flex items-center justify-center text-white/70 hover:text-white transition active:scale-95" title="Toggle Glass Audio">
+            <i id="audioIcon" class="fa-solid fa-volume-high text-[11px]"></i>
+          </button>
+          <button onclick="openLiveSupport()" class="px-2.5 py-1 rounded-full liquid-glass text-emerald-300 border border-emerald-400/30 text-xs font-medium flex items-center space-x-1 hover:bg-emerald-500/10 transition active:scale-95">
+            <i class="fa-solid fa-headset text-[10px]"></i>
+            <span class="text-[10px]">Concierge</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============================================== -->
+    <!-- MAIN SCROLLABLE APP CONTENT                    -->
+    <!-- ============================================== -->
+    <main class="flex-1 overflow-y-auto pb-28 hide-scrollbar relative" id="mainContent">
+
+      <!-- ============================================== -->
+      <!-- VIEW 1: AUTHENTICATION (Apple Liquid Glass UI) -->
+      <!-- ============================================== -->
+      <section id="authSection" class="p-5 flex flex-col justify-center min-h-[calc(100vh-140px)]">
+        
+        <!-- Apple Hero Icon & Typography -->
+        <div class="text-center my-4 relative">
+          <div class="relative inline-block mb-3">
+            <div class="w-20 h-20 rounded-[28px] liquid-glass-elevated flex items-center justify-center text-emerald-300 text-3xl shadow-[0_15px_35px_rgba(16,185,129,0.3)] mx-auto relative overflow-hidden group">
+              <div class="absolute inset-0 bg-gradient-to-tr from-emerald-500/20 to-cyan-500/10 pointer-events-none"></div>
+              <i class="fa-solid fa-seedling transform group-hover:scale-110 transition duration-300"></i>
+            </div>
+            <span class="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-emerald-500 text-black text-[10px] font-black flex items-center justify-center shadow-lg">
+              <i class="fa-solid fa-bolt"></i>
+            </span>
+          </div>
+
+          <h2 class="text-2xl font-black text-white tracking-tight flex items-center justify-center space-x-2">
+            <span>Agriculture</span>
+            <span class="text-emerald-400 font-light">OS</span>
+          </h2>
+          
+          <p class="text-xs text-white/60 max-w-xs mx-auto mt-2 leading-relaxed font-normal">
+            Smart Agriculture is the use of advanced technologies like IoT, Bio-Sensors & Hybrid Seed Ecosystems.
+          </p>
+        </div>
+
+        <!-- Apple Segmented Control (Pill Switcher) -->
+        <div class="p-1 rounded-2xl liquid-glass flex max-w-xs mx-auto w-full mb-6 border border-white/10 shadow-inner">
+          <button onclick="switchAuthTab('login')" id="tabBtnLogin" class="flex-1 py-2 text-xs font-semibold rounded-xl transition duration-200 bg-white/20 text-white shadow-sm backdrop-blur-lg">
+            LOG IN
+          </button>
+          <button onclick="switchAuthTab('register')" id="tabBtnRegister" class="flex-1 py-2 text-xs font-semibold rounded-xl transition duration-200 text-white/60 hover:text-white">
+            REGISTER
+          </button>
+          <button onclick="switchAuthTab('forgot')" id="tabBtnForgot" class="flex-1 py-2 text-xs font-semibold rounded-xl transition duration-200 text-white/60 hover:text-white">
+            RESET
+          </button>
+        </div>
+
+        <!-- --- FORM A: LOGIN (Frosted Glass) --- -->
+        <form id="loginForm" onsubmit="handleLogin(event)" class="space-y-4 max-w-sm mx-auto w-full">
+          <div>
+            <label class="block text-xs font-medium text-white/70 mb-1.5 pl-1">Mobile Identifier</label>
+            <div class="flex rounded-2xl glass-input overflow-hidden focus-within:border-emerald-400">
+              <span class="inline-flex items-center px-3.5 bg-white/5 text-white/80 font-mono text-xs border-r border-white/10">
+                🇮🇳 +91
+              </span>
+              <input type="tel" id="loginPhone" required placeholder="10-digit number" maxlength="10" pattern="[0-9]{10}" value="9876543210" class="w-full px-3 py-3 text-sm bg-transparent text-white placeholder-white/30 focus:outline-none font-medium">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-medium text-white/70 mb-1.5 pl-1">Secure Passkey</label>
+            <div class="relative rounded-2xl glass-input overflow-hidden focus-within:border-emerald-400">
+              <input type="password" id="loginPassword" required placeholder="Enter password" value="123456" class="w-full pl-3.5 pr-10 py-3 text-sm bg-transparent text-white placeholder-white/30 focus:outline-none font-medium">
+              <button type="button" onclick="togglePassVisibility('loginPassword', 'loginEyeIcon')" class="absolute right-3.5 top-3.5 text-white/50 hover:text-white">
+                <i id="loginEyeIcon" class="fa-regular fa-eye"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between text-xs px-1">
+            <label class="flex items-center space-x-2 cursor-pointer">
+              <input type="checkbox" checked class="rounded border-white/20 bg-white/10 text-emerald-500 focus:ring-0 h-4 w-4">
+              <span class="text-white/70">Biometric remember</span>
+            </label>
+            <button type="button" onclick="switchAuthTab('forgot')" class="text-emerald-400 font-medium hover:underline">
+              Forgot?
+            </button>
+          </div>
+
+          <button type="submit" class="w-full py-3.5 px-4 glass-btn-primary text-white font-bold text-sm rounded-2xl uppercase tracking-wider flex items-center justify-center space-x-2">
+            <span>ENTER SECURE PORTAL</span>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </button>
+
+          <!-- Quick Test Hint -->
+          <div class="liquid-glass-card rounded-xl p-2.5 text-center text-xs text-emerald-300 font-medium border border-emerald-500/20">
+            <i class="fa-solid fa-circle-check text-emerald-400 mr-1"></i> Apple Demo Session Ready. Tap <b>"ENTER"</b>.
+          </div>
+
+          <div class="text-center pt-1 text-xs text-white/60">
+            New to Smart Agriculture? 
+            <button type="button" onclick="switchAuthTab('register')" class="text-emerald-400 font-bold underline ml-1 hover:text-emerald-300">
+              Register now
+            </button>
+          </div>
+        </form>
+
+        <!-- --- FORM B: REGISTER (Frosted Glass) --- -->
+        <form id="registerForm" onsubmit="handleRegister(event)" class="hidden space-y-3.5 max-w-sm mx-auto w-full">
+          <div>
+            <label class="block text-xs font-medium text-white/70 mb-1 pl-1">Mobile Number</label>
+            <div class="flex rounded-2xl glass-input overflow-hidden">
+              <span class="inline-flex items-center px-3.5 bg-white/5 text-white/80 font-mono text-xs border-r border-white/10">
+                +91
+              </span>
+              <input type="tel" id="regPhone" required placeholder="Enter mobile" maxlength="10" pattern="[0-9]{10}" class="w-full px-3 py-2.5 text-sm bg-transparent text-white focus:outline-none">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-medium text-white/70 mb-1 pl-1">SMS Verification Code</label>
+            <div class="flex rounded-2xl glass-input overflow-hidden">
+              <input type="text" id="regOtp" required placeholder="6-digit OTP" maxlength="6" value="784912" class="w-full px-3.5 py-2.5 text-sm bg-transparent text-white focus:outline-none font-mono">
+              <button type="button" onclick="sendOtpSimulator(this)" class="px-3.5 text-xs font-semibold bg-white/10 text-emerald-300 hover:bg-white/20 transition whitespace-nowrap">
+                Send OTP
+              </button>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-medium text-white/70 mb-1 pl-1">Create Password</label>
+            <input type="password" id="regPassword" required placeholder="Min 6 characters" minlength="6" class="w-full px-3.5 py-2.5 rounded-2xl glass-input text-sm text-white focus:outline-none">
+          </div>
+
+          <div>
+            <label class="block text-xs font-medium text-white/70 mb-1 pl-1">Confirm Password</label>
+            <input type="password" id="regConfirmPassword" required placeholder="Repeat password" minlength="6" class="w-full px-3.5 py-2.5 rounded-2xl glass-input text-sm text-white focus:outline-none">
+          </div>
+
+          <div>
+            <label class="block text-xs font-medium text-white/70 mb-1 pl-1">Invite Code</label>
+            <div class="relative">
+              <input type="text" id="regInvite" placeholder="Optional" value="KAVER888" class="w-full px-3.5 py-2.5 uppercase rounded-2xl glass-input text-sm font-mono text-white focus:outline-none">
+              <span class="absolute right-3 top-2.5 text-[10px] text-emerald-300 bg-emerald-500/20 px-2 py-0.5 rounded-md border border-emerald-500/30">Verified</span>
+            </div>
+          </div>
+
+          <button type="submit" class="w-full py-3.5 glass-btn-primary text-white font-bold text-sm rounded-2xl uppercase tracking-wider">
+            COMPLETE REGISTRATION
+          </button>
+
+          <div class="text-center pt-1 text-xs text-white/60">
+            Have an account? 
+            <button type="button" onclick="switchAuthTab('login')" class="text-emerald-400 font-bold underline ml-1">
+              Sign In
+            </button>
+          </div>
+        </form>
+
+        <!-- --- FORM C: FORGOT PASSWORD --- -->
+        <form id="forgotForm" onsubmit="handleForgot(event)" class="hidden space-y-4 max-w-sm mx-auto w-full">
+          <div>
+            <label class="block text-xs font-medium text-white/70 mb-1.5 pl-1">Registered Phone</label>
+            <div class="flex rounded-2xl glass-input overflow-hidden">
+              <span class="inline-flex items-center px-3.5 bg-white/5 text-white/80 font-mono text-xs border-r border-white/10">+91</span>
+              <input type="tel" id="forgotPhone" required placeholder="10-digit mobile" maxlength="10" class="w-full px-3 py-3 text-sm bg-transparent text-white focus:outline-none">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-medium text-white/70 mb-1.5 pl-1">SMS Verification</label>
+            <div class="flex rounded-2xl glass-input overflow-hidden">
+              <input type="text" id="forgotOtp" required placeholder="OTP code" value="654321" class="w-full px-3 py-3 text-sm bg-transparent text-white focus:outline-none font-mono">
+              <button type="button" onclick="sendOtpSimulator(this)" class="px-3 text-xs font-semibold bg-white/10 text-emerald-300">Get Code</button>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-medium text-white/70 mb-1.5 pl-1">New Passkey</label>
+            <input type="password" id="forgotNewPass" required placeholder="Min 6 characters" minlength="6" class="w-full px-3.5 py-3 rounded-2xl glass-input text-sm text-white focus:outline-none">
+          </div>
+
+          <button type="submit" class="w-full py-3.5 glass-btn-primary text-white font-bold text-sm rounded-2xl uppercase tracking-wider">
+            UPDATE CREDENTIALS
+          </button>
+
+          <div class="text-center pt-1 text-xs">
+            <button type="button" onclick="switchAuthTab('login')" class="text-white/60 hover:text-emerald-300">
+              <i class="fa-solid fa-arrow-left mr-1"></i> Back to Login
+            </button>
+          </div>
+        </form>
+
+      </section>
+
+      <!-- ============================================== -->
+      <!-- VIEW 2: LOGGED-IN PORTAL (Apple Liquid Glass) -->
+      <!-- ============================================== -->
+      <div id="appPagesSection" class="hidden">
+
+        <!-- TAB 1: HOME PAGE (Liquid Apple Card Experience) -->
+        <div id="pageHome" class="space-y-4 p-4">
+          
+          <!-- Apple Holographic Liquid Glass Card -->
+          <div class="apple-titanium-card rounded-3xl p-5 text-white relative">
+            <div class="flex items-center justify-between mb-4 relative z-10">
+              <div class="flex items-center space-x-2.5">
+                <div class="w-10 h-10 rounded-2xl liquid-glass flex items-center justify-center font-bold text-lg shadow-sm border border-white/30">
+                  <i class="fa-solid fa-microchip text-emerald-300"></i>
+                </div>
+                <div>
+                  <div class="flex items-center space-x-1.5">
+                    <span id="userDisplayPhone" class="text-xs font-bold tracking-wide font-mono">+91 98765*****</span>
+                    <span class="bg-amber-400/30 text-amber-300 border border-amber-300/40 text-[9px] font-bold px-2 py-0.5 rounded-full uppercase">VIP 1 TITANIUM</span>
+                  </div>
+                  <p class="text-[10px] text-emerald-200/80">Decentralized Agriculture Vault</p>
+                </div>
+              </div>
+
+              <!-- Check-In Glass Pill -->
+              <button onclick="dailyCheckIn()" id="checkInBtn" class="liquid-glass hover:bg-white/20 text-emerald-300 border border-emerald-400/40 text-xs font-semibold px-3 py-1.5 rounded-xl transition flex items-center space-x-1 active:scale-95">
+                <i class="fa-solid fa-gift text-amber-300"></i>
+                <span>Sign In</span>
+              </button>
+            </div>
+
+            <!-- Balances Display with Privacy Eye Toggle -->
+            <div class="pt-2 border-t border-white/15 relative z-10">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                  <span class="text-[11px] text-white/70 font-medium">Available Portfolio</span>
+                  <button onclick="toggleBalancePrivacy()" class="text-white/50 hover:text-white text-xs">
+                    <i id="balanceEyeIcon" class="fa-regular fa-eye"></i>
+                  </button>
+                </div>
+                <span class="text-[10px] text-emerald-300 font-mono bg-emerald-500/20 px-2 py-0.5 rounded-full border border-emerald-500/30">
+                  +18.4% APY
+                </span>
+              </div>
+
+              <div class="flex items-baseline justify-between mt-1">
+                <p class="text-3xl font-extrabold tracking-tight flex items-baseline font-mono">
+                  <span class="text-emerald-400 mr-1 text-2xl">₹</span>
+                  <span id="userBalanceText">1,250.00</span>
+                </p>
+
+                <div class="text-right">
+                  <span class="text-[10px] text-white/60 block">Today's Harvest</span>
+                  <span class="text-base font-bold text-amber-300 font-mono">+₹<span id="userTodayEarnings">185.00</span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Glass Notice Ticker -->
+          <div class="liquid-glass-card rounded-2xl px-3.5 py-2.5 flex items-center space-x-2.5 text-xs text-white/90">
+            <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-[9px] font-bold px-2 py-0.5 rounded-md uppercase tracking-wider">LIVE</span>
+            <div class="overflow-hidden whitespace-nowrap flex-1 text-white/80">
+              <div class="inline-block animate-marquee font-medium text-xs">
+                🌱 Kaveri Seeds Smart IoT Protocol active. Instant withdrawals verified across all UPI corridors.
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Action Buttons Grid (Apple Liquid Glass Pills) -->
+          <div class="grid grid-cols-4 gap-2.5 text-center">
+            <button onclick="openRechargeModal()" class="liquid-glass-card p-3 rounded-2xl flex flex-col items-center group active:scale-95 transition">
+              <div class="w-11 h-11 rounded-2xl bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center justify-center text-lg mb-1.5 group-hover:scale-110 transition">
+                <i class="fa-solid fa-wallet"></i>
+              </div>
+              <span class="text-xs font-semibold text-white/90">Recharge</span>
+            </button>
+
+            <button onclick="openWithdrawModal()" class="liquid-glass-card p-3 rounded-2xl flex flex-col items-center group active:scale-95 transition">
+              <div class="w-11 h-11 rounded-2xl bg-amber-500/20 text-amber-400 border border-amber-500/30 flex items-center justify-center text-lg mb-1.5 group-hover:scale-110 transition">
+                <i class="fa-solid fa-money-bill-transfer"></i>
+              </div>
+              <span class="text-xs font-semibold text-white/90">Withdraw</span>
+            </button>
+
+            <button onclick="openTelegramChannel()" class="liquid-glass-card p-3 rounded-2xl flex flex-col items-center group active:scale-95 transition">
+              <div class="w-11 h-11 rounded-2xl bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 flex items-center justify-center text-lg mb-1.5 group-hover:scale-110 transition">
+                <i class="fa-brands fa-telegram"></i>
+              </div>
+              <span class="text-xs font-semibold text-white/90">Channel</span>
+            </button>
+
+            <button onclick="openLiveSupport()" class="liquid-glass-card p-3 rounded-2xl flex flex-col items-center group active:scale-95 transition">
+              <div class="w-11 h-11 rounded-2xl bg-purple-500/20 text-purple-400 border border-purple-500/30 flex items-center justify-center text-lg mb-1.5 group-hover:scale-110 transition">
+                <i class="fa-solid fa-headset"></i>
+              </div>
+              <span class="text-xs font-semibold text-white/90">Concierge</span>
+            </button>
+          </div>
+
+          <!-- Featured Agricultural Hero Card (Frosted Glass) -->
+          <div class="liquid-glass-elevated rounded-3xl p-4.5 border border-white/20 relative overflow-hidden">
+            <div class="flex items-center justify-between mb-2">
+              <span class="bg-gradient-to-r from-emerald-500/30 to-cyan-500/30 text-emerald-300 border border-emerald-400/40 text-[10px] font-extrabold px-2.5 py-0.5 rounded-full">
+                Apple Certified Hybrid Pack
+              </span>
+              <span class="text-xs text-white/50 font-mono">Cycle: 45 Days</span>
+            </div>
+            <h3 class="text-base font-extrabold text-white">Kaveri Bio-Hybrid Cotton Seeds</h3>
+            <p class="text-xs text-white/60 mt-1 mb-3">IoT soil conductivity monitor & satellite high-yield germination pack.</p>
+            
+            <div class="liquid-glass-card rounded-2xl p-3 flex justify-between items-center mb-3">
+              <div>
+                <span class="text-[9px] text-white/40 font-bold uppercase">Price</span>
+                <p class="text-lg font-black text-white font-mono">₹850.00</p>
+              </div>
+              <div>
+                <span class="text-[9px] text-white/40 font-bold uppercase">Daily Yield</span>
+                <p class="text-lg font-black text-emerald-400 font-mono">+₹46.75</p>
+              </div>
+              <div>
+                <span class="text-[9px] text-white/40 font-bold uppercase">Net Total</span>
+                <p class="text-lg font-black text-amber-300 font-mono">₹2,103</p>
+              </div>
+            </div>
+
+            <button onclick="quickInvestProduct(0)" class="w-full py-3 glass-btn-primary text-white rounded-2xl font-bold text-xs shadow-lg uppercase tracking-wider">
+              Invest In Hybrid Pack
+            </button>
+          </div>
+
+          <!-- Hot Market Seeds List Preview -->
+          <div>
+            <div class="flex items-center justify-between mb-3 px-1">
+              <h4 class="text-xs font-bold text-white/80 uppercase tracking-wider flex items-center">
+                <i class="fa-solid fa-fire text-amber-400 mr-1.5"></i> Curated Seed Contracts
+              </h4>
+              <button onclick="switchTab('market')" class="text-xs font-semibold text-emerald-400 hover:text-emerald-300">
+                View All <i class="fa-solid fa-chevron-right text-[9px]"></i>
+              </button>
+            </div>
+
+            <div class="space-y-3" id="homeProductsList">
+              <!-- Rendered via JS -->
+            </div>
+          </div>
+
+        </div>
+
+        <!-- TAB 2: MARKET / SEED PRODUCTS -->
+        <div id="pageMarket" class="hidden p-4 space-y-4">
+          <div class="flex items-center justify-between">
+            <div>
+              <h2 class="text-lg font-bold text-white">Seed Portfolio Catalog</h2>
+              <p class="text-xs text-white/50">Bio-engineered seed contracts with daily automated yield</p>
+            </div>
+            <span class="p-2 liquid-glass text-emerald-300 rounded-2xl text-xs font-medium border border-emerald-400/30">
+              <i class="fa-solid fa-leaf mr-1"></i> Live Contracts
+            </span>
+          </div>
+
+          <!-- Apple Liquid Pill Categories -->
+          <div class="flex space-x-2 overflow-x-auto pb-1 hide-scrollbar">
+            <button onclick="filterProducts('all', this)" class="px-4 py-2 text-xs font-bold rounded-xl bg-white/20 text-white whitespace-nowrap shadow-sm category-filter border border-white/20">
+              All Seeds
+            </button>
+            <button onclick="filterProducts('cotton', this)" class="px-4 py-2 text-xs font-medium rounded-xl liquid-glass text-white/70 hover:text-white whitespace-nowrap category-filter">
+              Cotton & Fibre
+            </button>
+            <button onclick="filterProducts('grain', this)" class="px-4 py-2 text-xs font-medium rounded-xl liquid-glass text-white/70 hover:text-white whitespace-nowrap category-filter">
+              Grains & Cereals
+            </button>
+            <button onclick="filterProducts('iot', this)" class="px-4 py-2 text-xs font-medium rounded-xl liquid-glass text-white/70 hover:text-white whitespace-nowrap category-filter">
+              IoT Greenhouses
+            </button>
+          </div>
+
+          <!-- Products Listing Container -->
+          <div class="space-y-3.5" id="productsCatalog">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+
+        <!-- TAB 3: ORDERS / HARVEST EARNINGS -->
+        <div id="pageOrders" class="hidden p-4 space-y-4">
+          <div class="flex items-center justify-between">
+            <div>
+              <h2 class="text-lg font-bold text-white">Active Crop Contracts</h2>
+              <p class="text-xs text-white/50">Real-time daily yield accumulator and claim depot</p>
+            </div>
+            <button onclick="harvestAllProfits()" class="px-3.5 py-1.5 bg-gradient-to-r from-amber-500 to-amber-600 text-black font-extrabold rounded-xl text-xs shadow-lg flex items-center space-x-1.5 active:scale-95 transition">
+              <i class="fa-solid fa-wheat-awn"></i>
+              <span>Harvest All</span>
+            </button>
+          </div>
+
+          <!-- Total Invested Stats Glass Grid -->
+          <div class="grid grid-cols-2 gap-3">
+            <div class="liquid-glass-card p-4 rounded-3xl">
+              <p class="text-[10px] font-bold text-white/50 uppercase">Capital Locked</p>
+              <p class="text-2xl font-black text-white font-mono" id="totalActiveInvestAmount">₹0.00</p>
+            </div>
+            <div class="liquid-glass-card p-4 rounded-3xl">
+              <p class="text-[10px] font-bold text-white/50 uppercase">Unclaimed Harvest</p>
+              <p class="text-2xl font-black text-emerald-400 font-mono" id="pendingHarvestAmount">₹0.00</p>
+            </div>
+          </div>
+
+          <!-- Active Plans List -->
+          <div id="ordersList" class="space-y-3">
+            <!-- Populated via JS -->
+          </div>
+        </div>
+
+        <!-- TAB 4: TEAM & REFERRAL -->
+        <div id="pageTeam" class="hidden p-4 space-y-4">
+          <!-- Invite Hero Banner -->
+          <div class="liquid-glass-elevated rounded-3xl p-5 text-white border border-emerald-500/30 relative overflow-hidden">
+            <div class="relative z-10">
+              <span class="bg-emerald-500/20 text-emerald-300 font-mono text-[10px] px-2.5 py-0.5 rounded-full border border-emerald-500/30 uppercase">
+                Tier-3 Smart Referral Network
+              </span>
+              <h3 class="text-lg font-black mt-2">Grow Community & Earn Revenue</h3>
+              <p class="text-xs text-white/60 mt-1 mb-4">Earn up to 28% multi-tier profit on downstream agricultural contracts.</p>
+              
+              <!-- Invite Code Display -->
+              <div class="liquid-glass rounded-2xl p-3 flex items-center justify-between border border-white/20 mb-2.5">
+                <div>
+                  <span class="text-[10px] uppercase text-white/50 font-bold">My Personal Invite Code</span>
+                  <p class="text-base font-black tracking-wider text-amber-300 font-mono" id="myInviteCode">KAVER779</p>
+                </div>
+                <button onclick="copyToClipboard('KAVER779', 'Invite code copied!')" class="px-3.5 py-1.5 liquid-glass hover:bg-white/20 text-white text-xs font-bold rounded-xl border border-white/30 active:scale-95 transition">
+                  Copy
+                </button>
+              </div>
+
+              <!-- Referral Link -->
+              <div class="liquid-glass rounded-2xl p-3 flex items-center justify-between border border-white/20">
+                <div class="truncate mr-2">
+                  <span class="text-[10px] uppercase text-white/50 font-bold">Direct Access Link</span>
+                  <p class="text-xs truncate font-mono text-white/80" id="myReferralUrl">https://kaversedsmarket.com/home/register?invite=KAVER779</p>
+                </div>
+                <button onclick="copyToClipboard('https://kaversedsmarket.com/home/register?invite=KAVER779', 'Referral URL copied!')" class="px-3.5 py-1.5 glass-btn-primary text-white text-xs font-bold rounded-xl active:scale-95 transition whitespace-nowrap">
+                  Share
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tier Breakdown Cards -->
+          <div class="grid grid-cols-3 gap-2.5 text-center">
+            <div class="liquid-glass-card p-3 rounded-2xl">
+              <span class="text-[10px] font-bold text-white/50 uppercase">Tier 1</span>
+              <p class="text-xl font-black text-emerald-400 font-mono">25%</p>
+              <p class="text-[10px] text-white/40">Direct Partners</p>
+            </div>
+            <div class="liquid-glass-card p-3 rounded-2xl">
+              <span class="text-[10px] font-bold text-white/50 uppercase">Tier 2</span>
+              <p class="text-xl font-black text-cyan-400 font-mono">3%</p>
+              <p class="text-[10px] text-white/40">Secondary</p>
+            </div>
+            <div class="liquid-glass-card p-3 rounded-2xl">
+              <span class="text-[10px] font-bold text-white/50 uppercase">Tier 3</span>
+              <p class="text-xl font-black text-amber-300 font-mono">1%</p>
+              <p class="text-[10px] text-white/40">Tertiary</p>
+            </div>
+          </div>
+
+          <!-- Daily Salary Milestones -->
+          <div class="liquid-glass-card rounded-3xl p-4.5 space-y-3">
+            <h4 class="text-xs font-bold text-white/70 uppercase tracking-wider">Daily Community Salary Milestones</h4>
+            <div class="space-y-2">
+              <div class="flex items-center justify-between p-3 liquid-glass rounded-xl text-xs">
+                <div>
+                  <p class="font-bold text-white">Milestone 1 · 5 Active Farmers</p>
+                  <p class="text-[10px] text-white/50">Current progress: 2/5 active</p>
+                </div>
+                <span class="font-black text-emerald-300 bg-emerald-500/20 px-2.5 py-1 rounded-lg border border-emerald-500/30 font-mono">₹30 / Day</span>
+              </div>
+              <div class="flex items-center justify-between p-3 liquid-glass rounded-xl text-xs">
+                <div>
+                  <p class="font-bold text-white">Milestone 2 · 12 Active Farmers</p>
+                  <p class="text-[10px] text-white/50">Current progress: 2/12 active</p>
+                </div>
+                <span class="font-black text-emerald-300 bg-emerald-500/20 px-2.5 py-1 rounded-lg border border-emerald-500/30 font-mono">₹70 / Day</span>
+              </div>
+              <div class="flex items-center justify-between p-3 liquid-glass rounded-xl text-xs">
+                <div>
+                  <p class="font-bold text-white">Milestone 3 · 25 Active Farmers</p>
+                  <p class="text-[10px] text-white/50">Unlock VIP Syndicate</p>
+                </div>
+                <span class="font-black text-emerald-300 bg-emerald-500/20 px-2.5 py-1 rounded-lg border border-emerald-500/30 font-mono">₹250 / Day</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 5: MINE / PROFILE -->
+        <div id="pageMine" class="hidden p-4 space-y-4">
+          <!-- Profile Card -->
+          <div class="liquid-glass-elevated rounded-3xl p-4 flex items-center justify-between">
+            <div class="flex items-center space-x-3.5">
+              <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-emerald-500 to-cyan-500 text-black flex items-center justify-center text-2xl font-black shadow-lg">
+                <i class="fa-solid fa-user-astronaut"></i>
+              </div>
+              <div>
+                <h3 class="text-base font-extrabold text-white" id="profilePhone">+91 9876543210</h3>
+                <p class="text-xs text-white/50 font-mono">Node ID: <span class="text-emerald-300 font-bold" id="profileUid">KS-99214</span></p>
+                <div class="mt-1 flex items-center space-x-1.5">
+                  <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-[9px] font-bold px-2 py-0.5 rounded-md">Apple VIP 1</span>
+                  <span class="bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 text-[9px] font-bold px-2 py-0.5 rounded-md">KYC Secure</span>
+                </div>
+              </div>
+            </div>
+            <button onclick="handleLogout()" class="text-white/40 hover:text-rose-400 p-2.5 rounded-xl liquid-glass text-lg transition" title="Log Out">
+              <i class="fa-solid fa-power-off"></i>
+            </button>
+          </div>
+
+          <!-- Total Balance & Quick Action Center -->
+          <div class="liquid-glass-card rounded-3xl p-5 text-white">
+            <span class="text-[11px] text-white/50 uppercase font-mono font-bold tracking-wider">Treasury Balance</span>
+            <div class="flex items-baseline justify-between mt-1 mb-4">
+              <div class="text-3xl font-black tracking-tight text-white flex items-baseline font-mono">
+                <span class="text-emerald-400 mr-1">₹</span><span id="profileBalanceText">1,250.00</span>
+              </div>
+              <span class="text-[10px] font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-2.5 py-1 rounded-xl font-mono">
+                Encrypted Vault
+              </span>
+            </div>
+
+            <div class="grid grid-cols-2 gap-2.5 pt-2 border-t border-white/10">
+              <button onclick="openRechargeModal()" class="w-full py-2.5 glass-btn-primary text-white font-bold rounded-xl text-xs flex items-center justify-center space-x-1.5 shadow">
+                <i class="fa-solid fa-plus-circle"></i>
+                <span>Recharge</span>
+              </button>
+              <button onclick="openWithdrawModal()" class="w-full py-2.5 liquid-glass hover:bg-white/20 text-white font-bold rounded-xl text-xs flex items-center justify-center space-x-1.5 border border-white/20">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                <span>Withdraw</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Settings & Actions Glass Menu -->
+          <div class="liquid-glass-card rounded-3xl divide-y divide-white/[0.08] overflow-hidden">
+            <button onclick="openBankDetailsModal()" class="w-full px-4 py-3.5 flex items-center justify-between text-left hover:bg-white/5 transition">
+              <div class="flex items-center space-x-3 text-white">
+                <div class="w-8 h-8 rounded-xl liquid-glass text-emerald-300 flex items-center justify-center text-sm">
+                  <i class="fa-solid fa-building-columns"></i>
+                </div>
+                <div>
+                  <span class="text-xs font-bold block">Bound Payout Card</span>
+                  <span class="text-[10px] text-white/50 font-mono" id="bankBindingStatus">State Bank of India (***4389)</span>
+                </div>
+              </div>
+              <i class="fa-solid fa-chevron-right text-white/30 text-xs"></i>
+            </button>
+
+            <button onclick="openHistoryModal()" class="w-full px-4 py-3.5 flex items-center justify-between text-left hover:bg-white/5 transition">
+              <div class="flex items-center space-x-3 text-white">
+                <div class="w-8 h-8 rounded-xl liquid-glass text-cyan-300 flex items-center justify-center text-sm">
+                  <i class="fa-solid fa-file-invoice-dollar"></i>
+                </div>
+                <div>
+                  <span class="text-xs font-bold block">Financial Ledger</span>
+                  <span class="text-[10px] text-white/50">Recharge, settlement & harvest logs</span>
+                </div>
+              </div>
+              <i class="fa-solid fa-chevron-right text-white/30 text-xs"></i>
+            </button>
+
+            <button onclick="openAboutModal()" class="w-full px-4 py-3.5 flex items-center justify-between text-left hover:bg-white/5 transition">
+              <div class="flex items-center space-x-3 text-white">
+                <div class="w-8 h-8 rounded-xl liquid-glass text-amber-300 flex items-center justify-center text-sm">
+                  <i class="fa-solid fa-certificate"></i>
+                </div>
+                <div>
+                  <span class="text-xs font-bold block">About Agriculture OS</span>
+                  <span class="text-[10px] text-white/50">Kaveri Seeds IoT Ecosystem Standard</span>
+                </div>
+              </div>
+              <i class="fa-solid fa-chevron-right text-white/30 text-xs"></i>
+            </button>
+
+            <button onclick="handleLogout()" class="w-full px-4 py-3.5 flex items-center justify-between text-left hover:bg-rose-500/10 text-rose-400 transition">
+              <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 rounded-xl liquid-glass text-rose-400 flex items-center justify-center text-sm">
+                  <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                </div>
+                <div>
+                  <span class="text-xs font-bold block">Sign Out</span>
+                  <span class="text-[10px] text-rose-400/60">Terminate active Apple session</span>
+                </div>
+              </div>
+              <i class="fa-solid fa-chevron-right text-rose-400/40 text-xs"></i>
+            </button>
+          </div>
+
+          <!-- Apple Minimalist Footer Slogan -->
+          <div class="text-center pt-2">
+            <p class="text-[11px] text-white/40 font-medium">
+              — Agriculture —<br>
+              <span class="text-[10px] text-white/30">Smart Agriculture is the use of advanced technologies like IoT.</span>
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+
+    <!-- ============================================== -->
+    <!-- FLOATING APPLE LIQUID GLASS DOCK (Bottom Nav) -->
+    <!-- ============================================== -->
+    <nav id="bottomNav" class="hidden absolute bottom-4 left-4 right-4 floating-glass-dock rounded-full py-2 px-3 z-30 flex justify-around items-center shadow-2xl">
+      <button onclick="switchTab('home')" id="navHome" class="flex flex-col items-center flex-1 text-emerald-400 font-bold transition py-1">
+        <i class="fa-solid fa-house text-base mb-0.5"></i>
+        <span class="text-[9px]">Home</span>
+      </button>
+
+      <button onclick="switchTab('market')" id="navMarket" class="flex flex-col items-center flex-1 text-white/45 hover:text-white font-medium transition py-1">
+        <i class="fa-solid fa-seedling text-base mb-0.5"></i>
+        <span class="text-[9px]">Market</span>
+      </button>
+
+      <button onclick="switchTab('orders')" id="navOrders" class="flex flex-col items-center flex-1 text-white/45 hover:text-white font-medium transition py-1 relative">
+        <span id="orderBadgeCount" class="absolute 0 right-4 bg-emerald-500 text-black text-[9px] w-3.5 h-3.5 rounded-full flex items-center justify-center font-bold">1</span>
+        <i class="fa-solid fa-chart-line text-base mb-0.5"></i>
+        <span class="text-[9px]">Yields</span>
+      </button>
+
+      <button onclick="switchTab('team')" id="navTeam" class="flex flex-col items-center flex-1 text-white/45 hover:text-white font-medium transition py-1">
+        <i class="fa-solid fa-users text-base mb-0.5"></i>
+        <span class="text-[9px]">Team</span>
+      </button>
+
+      <button onclick="switchTab('mine')" id="navMine" class="flex flex-col items-center flex-1 text-white/45 hover:text-white font-medium transition py-1">
+        <i class="fa-solid fa-user text-base mb-0.5"></i>
+        <span class="text-[9px]">Mine</span>
+      </button>
+    </nav>
+
+    <!-- FLOATING TOAST NOTIFICATION BOX (Liquid Island style) -->
+    <div id="toastNotification" class="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 opacity-0 pointer-events-none scale-90">
+      <div id="toastInner" class="liquid-glass-elevated text-white text-xs font-semibold py-2.5 px-5 rounded-full shadow-2xl flex items-center space-x-2.5 border border-white/20">
+        <i id="toastIcon" class="fa-solid fa-circle-check text-emerald-400"></i>
+        <span id="toastMessage">Success</span>
+      </div>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- APPLE LIQUID GLASS SHEET MODALS                -->
+    <!-- ============================================== -->
+
+    <!-- MODAL 1: RECHARGE (UPI / QR GATEWAY SIMULATION) -->
+    <div id="rechargeModal" class="fixed inset-0 bg-black/70 backdrop-blur-md z-50 hidden flex items-end sm:items-center justify-center p-0 sm:p-4">
+      <div class="bg-[#0b101c]/95 border border-white/20 w-full max-w-md rounded-t-[36px] sm:rounded-[36px] p-5 space-y-4 max-h-[90vh] overflow-y-auto">
+        <div class="flex items-center justify-between pb-2 border-b border-white/10">
+          <div class="flex items-center space-x-2">
+            <span class="w-8 h-8 rounded-xl liquid-glass text-emerald-300 flex items-center justify-center font-bold text-sm">₹</span>
+            <h3 class="text-base font-extrabold text-white">Deposit Capital</h3>
+          </div>
+          <button onclick="closeModal('rechargeModal')" class="text-white/40 hover:text-white text-lg">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <div>
+          <label class="block text-xs font-medium text-white/70 mb-2">Fast Select Preset</label>
+          <div class="grid grid-cols-3 gap-2">
+            <button onclick="setRechargeAmount(500)" class="recharge-btn py-2 text-xs font-bold rounded-xl liquid-glass text-white hover:border-emerald-400 transition">₹500</button>
+            <button onclick="setRechargeAmount(850)" class="recharge-btn py-2 text-xs font-bold rounded-xl border border-emerald-400 bg-emerald-500/20 text-emerald-300 transition">₹850</button>
+            <button onclick="setRechargeAmount(2000)" class="recharge-btn py-2 text-xs font-bold rounded-xl liquid-glass text-white hover:border-emerald-400 transition">₹2,000</button>
+            <button onclick="setRechargeAmount(5000)" class="recharge-btn py-2 text-xs font-bold rounded-xl liquid-glass text-white hover:border-emerald-400 transition">₹5,000</button>
+            <button onclick="setRechargeAmount(10000)" class="recharge-btn py-2 text-xs font-bold rounded-xl liquid-glass text-white hover:border-emerald-400 transition">₹10,000</button>
+            <button onclick="setRechargeAmount(25000)" class="recharge-btn py-2 text-xs font-bold rounded-xl liquid-glass text-white hover:border-emerald-400 transition">₹25,000</button>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-medium text-white/70 mb-1">Custom Amount (Min ₹500)</label>
+          <div class="relative">
+            <span class="absolute left-3.5 top-2.5 font-bold text-white/40 text-sm">₹</span>
+            <input type="number" id="customRechargeInput" value="850" min="500" step="100" class="w-full pl-8 pr-3 py-2.5 rounded-xl glass-input text-sm font-mono font-extrabold text-white focus:outline-none">
+          </div>
+        </div>
+
+        <div class="liquid-glass p-3 rounded-2xl border border-white/10 space-y-2">
+          <div class="flex items-center justify-between text-xs font-semibold text-white/80">
+            <span>Payment Channels:</span>
+            <span class="text-emerald-400 text-[10px]">Instant IMPS / UPI 2.0</span>
+          </div>
+          <div class="flex space-x-2">
+            <label class="flex-1 border border-emerald-400 bg-emerald-500/10 p-2 rounded-xl text-center cursor-pointer">
+              <span class="block text-xs font-extrabold text-emerald-300">Apple UPI-1</span>
+              <span class="text-[10px] text-white/50">Auto-UTR Check</span>
+            </label>
+            <label class="flex-1 liquid-glass p-2 rounded-xl text-center cursor-pointer opacity-70">
+              <span class="block text-xs font-extrabold text-white">QR Gateway</span>
+              <span class="text-[10px] text-white/40">GPay / PhonePe</span>
+            </label>
+          </div>
+        </div>
+
+        <button onclick="processRechargeSubmit()" class="w-full py-3.5 glass-btn-primary text-white font-extrabold rounded-2xl text-xs uppercase tracking-wider">
+          Authorize Secure Deposit
+        </button>
+      </div>
+    </div>
+
+    <!-- MODAL 2: WITHDRAWAL -->
+    <div id="withdrawModal" class="fixed inset-0 bg-black/70 backdrop-blur-md z-50 hidden flex items-end sm:items-center justify-center p-0 sm:p-4">
+      <div class="bg-[#0b101c]/95 border border-white/20 w-full max-w-md rounded-t-[36px] sm:rounded-[36px] p-5 space-y-4 max-h-[90vh] overflow-y-auto">
+        <div class="flex items-center justify-between pb-2 border-b border-white/10">
+          <div class="flex items-center space-x-2">
+            <span class="w-8 h-8 rounded-xl liquid-glass text-amber-300 flex items-center justify-center font-bold text-sm">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </span>
+            <h3 class="text-base font-extrabold text-white">Withdraw Capital</h3>
+          </div>
+          <button onclick="closeModal('withdrawModal')" class="text-white/40 hover:text-white text-lg">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <!-- Bound Bank Display -->
+        <div class="liquid-glass-card rounded-2xl p-3 flex items-center justify-between">
+          <div>
+            <span class="text-[9px] text-white/40 uppercase font-mono font-bold">Payout Gateway</span>
+            <p class="text-xs font-bold text-white" id="withdrawBankName">State Bank of India</p>
+            <p class="text-[11px] text-white/50 font-mono" id="withdrawBankAcc">A/C: *******4389 (IFSC: SBIN0001842)</p>
+          </div>
+          <button onclick="openBankDetailsModal()" class="text-xs font-bold text-emerald-400 hover:underline">Change</button>
+        </div>
+
+        <div>
+          <div class="flex justify-between items-center mb-1">
+            <label class="text-xs font-medium text-white/70">Amount (Min ₹200)</label>
+            <span class="text-xs text-white/50">Available: <b class="text-emerald-400 font-mono" id="modalWithdrawableBalance">₹1,250.00</b></span>
+          </div>
+          <div class="relative">
+            <span class="absolute left-3.5 top-2.5 font-bold text-white/40 text-sm">₹</span>
+            <input type="number" id="withdrawAmountInput" placeholder="Enter amount" min="200" class="w-full pl-8 pr-3 py-2.5 rounded-xl glass-input text-sm font-mono font-extrabold text-white focus:outline-none">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-medium text-white/70 mb-1">Transaction Passkey</label>
+          <input type="password" id="withdrawPasswordInput" placeholder="Enter security password" class="w-full px-3.5 py-2.5 rounded-xl glass-input text-sm text-white focus:outline-none">
+        </div>
+
+        <div class="liquid-glass rounded-2xl p-3 border border-amber-500/20 text-xs text-amber-200/80 space-y-1">
+          <p class="font-bold text-amber-300"><i class="fa-solid fa-circle-exclamation mr-1"></i> Apple Settlement Protocol:</p>
+          <ul class="list-disc list-inside space-y-0.5 text-[10px] text-white/60">
+            <li>Processing windows: 09:30 AM – 06:30 PM (Daily).</li>
+            <li>Government TDS & Handling Fee: 10% automatically deducted.</li>
+            <li>Settlement speed: 10 mins to 2 hours via instant IMPS corridors.</li>
+          </ul>
+        </div>
+
+        <button onclick="processWithdrawSubmit()" class="w-full py-3.5 bg-gradient-to-r from-amber-500 to-amber-600 text-black font-extrabold rounded-2xl text-xs uppercase tracking-wider active:scale-95 transition">
+          Confirm Settlement Request
+        </button>
+      </div>
+    </div>
+
+    <!-- MODAL 3: BANK DETAILS BINDING -->
+    <div id="bankDetailsModal" class="fixed inset-0 bg-black/70 backdrop-blur-md z-50 hidden flex items-end sm:items-center justify-center p-0 sm:p-4">
+      <div class="bg-[#0b101c]/95 border border-white/20 w-full max-w-md rounded-t-[36px] sm:rounded-[36px] p-5 space-y-3.5 max-h-[90vh] overflow-y-auto">
+        <div class="flex items-center justify-between pb-2 border-b border-white/10">
+          <h3 class="text-base font-extrabold text-white">Bind Payout Banking Card</h3>
+          <button onclick="closeModal('bankDetailsModal')" class="text-white/40 hover:text-white text-lg">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <div>
+          <label class="block text-xs font-medium text-white/70 mb-1">Account Holder Full Name</label>
+          <input type="text" id="bankHolderInput" value="Ramesh Kumar Patel" class="w-full px-3 py-2 rounded-xl glass-input text-xs text-white focus:outline-none">
+        </div>
+
+        <div>
+          <label class="block text-xs font-medium text-white/70 mb-1">Financial Institution Name</label>
+          <input type="text" id="bankNameInput" value="State Bank of India" class="w-full px-3 py-2 rounded-xl glass-input text-xs text-white focus:outline-none">
+        </div>
+
+        <div>
+          <label class="block text-xs font-medium text-white/70 mb-1">Bank Account Number</label>
+          <input type="text" id="bankAccInput" value="384910294389" class="w-full px-3 py-2 rounded-xl glass-input text-xs font-mono font-bold text-white focus:outline-none">
+        </div>
+
+        <div>
+          <label class="block text-xs font-medium text-white/70 mb-1">IFSC Routing Code</label>
+          <input type="text" id="bankIfscInput" value="SBIN0001842" class="w-full px-3 py-2 rounded-xl glass-input text-xs uppercase font-mono font-bold text-white focus:outline-none">
+        </div>
+
+        <button onclick="saveBankDetails()" class="w-full py-3 glass-btn-primary text-white font-extrabold rounded-2xl text-xs uppercase">
+          Save Verified Details
+        </button>
+      </div>
+    </div>
+
+    <!-- MODAL 4: FINANCIAL HISTORY (Ledger) -->
+    <div id="historyModal" class="fixed inset-0 bg-black/70 backdrop-blur-md z-50 hidden flex items-end sm:items-center justify-center p-0 sm:p-4">
+      <div class="bg-[#0b101c]/95 border border-white/20 w-full max-w-md rounded-t-[36px] sm:rounded-[36px] p-5 space-y-3.5 max-h-[85vh] flex flex-col">
+        <div class="flex items-center justify-between pb-2 border-b border-white/10">
+          <h3 class="text-base font-extrabold text-white">Apple Financial Ledger</h3>
+          <button onclick="closeModal('historyModal')" class="text-white/40 hover:text-white text-lg">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <div class="flex-1 overflow-y-auto space-y-2 pr-1 hide-scrollbar" id="historyItemsList">
+          <!-- Dynamically filled -->
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL 5: 24/7 LIVE CONCIERGE CHAT -->
+    <div id="supportModal" class="fixed inset-0 bg-black/70 backdrop-blur-md z-50 hidden flex items-end sm:items-center justify-center p-0 sm:p-4">
+      <div class="bg-[#0b101c]/95 border border-white/20 w-full max-w-md rounded-t-[36px] sm:rounded-[36px] p-4 flex flex-col h-[520px]">
+        <div class="flex items-center justify-between pb-3 border-b border-white/10">
+          <div class="flex items-center space-x-2.5">
+            <div class="w-9 h-9 rounded-full liquid-glass text-emerald-400 flex items-center justify-center text-sm font-bold border border-emerald-500/30">
+              <i class="fa-solid fa-headset"></i>
+            </div>
+            <div>
+              <h4 class="text-xs font-bold text-white">Apple AgriCare Concierge</h4>
+              <span class="text-[10px] text-emerald-400 font-semibold flex items-center">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 mr-1 animate-ping"></span> Live 24/7 Satellite Feed
+              </span>
+            </div>
+          </div>
+          <button onclick="closeModal('supportModal')" class="text-white/40 hover:text-white text-lg">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <div class="flex-1 overflow-y-auto py-3 space-y-2.5 text-xs hide-scrollbar" id="supportChatMessages">
+          <div class="liquid-glass text-white/90 p-3 rounded-2xl rounded-tl-none max-w-[85%] border border-white/10">
+            Welcome to Kaveri Seeds Apple Liquid Support. How may our smart agriculture concierge assist your yields or recharges today?
+          </div>
+        </div>
+
+        <div class="pt-2 border-t border-white/10 flex items-center space-x-2">
+          <input type="text" id="supportInput" onkeydown="if(event.key === 'Enter') sendSupportMessage()" placeholder="Type query (e.g. Recharge, Harvest)..." class="flex-1 px-3 py-2.5 glass-input rounded-xl text-xs text-white focus:outline-none">
+          <button onclick="sendSupportMessage()" class="px-3.5 py-2.5 glass-btn-primary text-white rounded-xl text-xs font-bold">
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL 6: ABOUT AGRICULTURE / IOT COMPANY -->
+    <div id="aboutModal" class="fixed inset-0 bg-black/70 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
+      <div class="bg-[#0b101c]/95 border border-white/20 w-full max-w-sm rounded-[36px] p-5 space-y-3.5 text-center">
+        <div class="w-16 h-16 liquid-glass text-emerald-400 rounded-2xl flex items-center justify-center text-2xl mx-auto shadow-sm border border-emerald-500/30">
+          <i class="fa-solid fa-wheat-awn"></i>
+        </div>
+        <h3 class="text-base font-extrabold text-white">Kaveri Seeds Market</h3>
+        <p class="text-xs text-emerald-400 font-mono uppercase tracking-wider">Apple Liquid IoT Platform</p>
+        <p class="text-xs text-white/70 leading-relaxed text-justify liquid-glass p-3.5 rounded-2xl border border-white/10">
+          Smart Agriculture is the use of advanced technologies like IoT, AI satellite sensor telemetry, and ultra-high-yield bio-hybrid seeds to empower farming revenues with precision tracking and automated daily yields.
+        </p>
+        <button onclick="closeModal('aboutModal')" class="w-full py-3 glass-btn-primary text-white font-bold rounded-xl text-xs">
+          Dismiss Window
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- JAVASCRIPT: APPLE LIQUID GLASS LOGIC & SOUND ENGINE -->
+  <script>
+    // --- Apple Web Audio Synthesizer (No external sound files) ---
+    const AppleAudio = {
+      enabled: true,
+      ctx: null,
+      init() {
+        if (!this.ctx) {
+          const AudioContext = window.AudioContext || window.webkitAudioContext;
+          this.ctx = new AudioContext();
+        }
+      },
+      playClick() {
+        if (!this.enabled) return;
+        try {
+          this.init();
+          const osc = this.ctx.createOscillator();
+          const gain = this.ctx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(800, this.ctx.currentTime);
+          osc.frequency.exponentialRampToValueAtTime(300, this.ctx.currentTime + 0.04);
+          gain.gain.setValueAtTime(0.08, this.ctx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, this.ctx.currentTime + 0.04);
+          osc.connect(gain);
+          gain.connect(this.ctx.destination);
+          osc.start();
+          osc.stop(this.ctx.currentTime + 0.04);
+        } catch(e) {}
+      },
+      playChime() {
+        if (!this.enabled) return;
+        try {
+          this.init();
+          const now = this.ctx.currentTime;
+          [523.25, 659.25, 783.99, 1046.50].forEach((freq, i) => {
+            const osc = this.ctx.createOscillator();
+            const gain = this.ctx.createGain();
+            osc.type = 'triangle';
+            osc.frequency.setValueAtTime(freq, now + i * 0.07);
+            gain.gain.setValueAtTime(0.06, now + i * 0.07);
+            gain.gain.exponentialRampToValueAtTime(0.001, now + i * 0.07 + 0.25);
+            osc.connect(gain);
+            gain.connect(this.ctx.destination);
+            osc.start(now + i * 0.07);
+            osc.stop(now + i * 0.07 + 0.25);
+          });
+        } catch(e) {}
+      }
+    };
+
+    function toggleAudioFeedback() {
+      AppleAudio.enabled = !AppleAudio.enabled;
+      const icon = document.getElementById('audioIcon');
+      if (AppleAudio.enabled) {
+        icon.className = 'fa-solid fa-volume-high text-[11px]';
+        showToast("Glass audio feedback enabled", true);
+        AppleAudio.playClick();
+      } else {
+        icon.className = 'fa-solid fa-volume-xmark text-[11px] text-white/40';
+        showToast("Audio feedback muted", true);
+      }
+    }
+
+    // --- Dynamic Island Trigger Animation ---
+    function triggerDynamicIsland(text, icon = 'fa-solid fa-check') {
+      const island = document.getElementById('dynamicIsland');
+      const label = document.getElementById('islandLabel');
+      label.innerHTML = `<i class="${icon} text-emerald-400 mr-1"></i>${text}`;
+      island.classList.add('expanded');
+      setTimeout(() => {
+        island.classList.remove('expanded');
+        setTimeout(() => {
+          label.innerText = 'IoT AgriNet';
+        }, 300);
+      }, 3000);
+    }
+
+    // --- Digital iOS Clock Updater ---
+    function startClock() {
+      function update() {
+        const now = new Date();
+        const hrs = String(now.getHours()).padStart(2, '0');
+        const mins = String(now.getMinutes()).padStart(2, '0');
+        const el = document.getElementById('iosClock');
+        if (el) el.innerText = `${hrs}:${mins}`;
+      }
+      update();
+      setInterval(update, 1000);
+    }
+
+    // --- State Privacy Balance Eye ---
+    let isBalanceHidden = false;
+    function toggleBalancePrivacy() {
+      isBalanceHidden = !isBalanceHidden;
+      const eye = document.getElementById('balanceEyeIcon');
+      if (isBalanceHidden) {
+        eye.className = 'fa-regular fa-eye-slash';
+      } else {
+        eye.className = 'fa-regular fa-eye';
+      }
+      updateUI();
+      AppleAudio.playClick();
+    }
+
+    // --- Application State in Memory ---
+    const appState = {
+      isLoggedIn: false,
+      user: {
+        phone: '9876543210',
+        uid: 'KS-99214',
+        balance: 1250.00,
+        todayEarnings: 185.00,
+        inviteCode: 'KAVER779',
+        bank: {
+          holder: 'Ramesh Kumar Patel',
+          name: 'State Bank of India',
+          acc: '384910294389',
+          ifsc: 'SBIN0001842'
+        }
+      },
+      products: [
+        {
+          id: 1,
+          name: 'Kaveri Bio-Hybrid Cotton-1',
+          tag: 'Fibre Crop · IoT Monitored',
+          category: 'cotton',
+          price: 850,
+          dailyIncome: 46.75,
+          days: 45,
+          totalReturn: 2103.75,
+          badge: 'Most Popular',
+          icon: 'fa-cotton-bureau',
+          salesProgress: 84
+        },
+        {
+          id: 2,
+          name: 'Smart Hybrid Maize Gold',
+          tag: 'High Yield Grain · Satellite Soil',
+          category: 'grain',
+          price: 2100,
+          dailyIncome: 126.00,
+          days: 50,
+          totalReturn: 6300.00,
+          badge: 'Top Return',
+          icon: 'fa-wheat-awn',
+          salesProgress: 92
+        },
+        {
+          id: 3,
+          name: 'Micro-Nutrient AgriPack Plus',
+          tag: 'Soil Bio-Tech Starter',
+          category: 'grain',
+          price: 500,
+          dailyIncome: 25.00,
+          days: 30,
+          totalReturn: 750.00,
+          badge: 'Starter Plan',
+          icon: 'fa-vial',
+          salesProgress: 65
+        },
+        {
+          id: 4,
+          name: 'IoT Automated Greenhouse Pod',
+          tag: 'Precision Climate Control',
+          category: 'iot',
+          price: 6500,
+          dailyIncome: 422.50,
+          days: 60,
+          totalReturn: 25350.00,
+          badge: 'VIP Exclusive',
+          icon: 'fa-microchip',
+          salesProgress: 48
+        },
+        {
+          id: 5,
+          name: 'Kaveri Super Paddy Hybrid-108',
+          tag: 'Commercial Cereal Grade',
+          category: 'grain',
+          price: 12000,
+          dailyIncome: 840.00,
+          days: 65,
+          totalReturn: 54600.00,
+          badge: 'Commercial',
+          icon: 'fa-seedling',
+          salesProgress: 76
+        }
+      ],
+      orders: [
+        {
+          id: 'ORD-101',
+          productId: 1,
+          name: 'Kaveri Bio-Hybrid Cotton-1',
+          invested: 850,
+          dailyIncome: 46.75,
+          daysRemaining: 43,
+          totalDays: 45,
+          pendingClaim: 46.75,
+          lastHarvest: 'Today'
+        }
+      ],
+      transactions: [
+        { type: 'Harvest', title: 'Daily Cotton Crop Yield', amount: '+₹46.75', time: 'Today, 06:00 AM', status: 'Success' },
+        { type: 'Recharge', title: 'Apple UPI Deposit (Axis)', amount: '+₹1,000.00', time: 'Yesterday, 04:15 PM', status: 'Success' },
+        { type: 'Plan Buy', title: 'Invest: Bio-Hybrid Cotton-1', amount: '-₹850.00', time: 'Yesterday, 04:20 PM', status: 'Completed' }
+      ]
+    };
+
+    // --- DOM Initializer ---
+    window.onload = function() {
+      startClock();
+      renderProducts();
+      renderOrders();
+      renderTransactions();
+      updateUI();
+    };
+
+    // --- Apple Liquid Toast Notifications ---
+    function showToast(message, isSuccess = true) {
+      const toast = document.getElementById('toastNotification');
+      const toastMsg = document.getElementById('toastMessage');
+      const toastIcon = document.getElementById('toastIcon');
+      
+      toastMsg.innerText = message;
+      if (isSuccess) {
+        toastIcon.className = "fa-solid fa-circle-check text-emerald-400";
+        AppleAudio.playChime();
+      } else {
+        toastIcon.className = "fa-solid fa-circle-xmark text-rose-400";
+        AppleAudio.playClick();
+      }
+
+      toast.classList.remove('opacity-0', 'pointer-events-none', 'scale-90');
+      toast.classList.add('opacity-100', 'scale-100');
+
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'pointer-events-none', 'scale-90');
+        toast.classList.remove('opacity-100', 'scale-100');
+      }, 2600);
+    }
+
+    // --- Tab Switcher for Auth (Login / Register / Forgot) ---
+    function switchAuthTab(type) {
+      AppleAudio.playClick();
+      const loginForm = document.getElementById('loginForm');
+      const registerForm = document.getElementById('registerForm');
+      const forgotForm = document.getElementById('forgotForm');
+
+      const btnLogin = document.getElementById('tabBtnLogin');
+      const btnRegister = document.getElementById('tabBtnRegister');
+      const btnForgot = document.getElementById('tabBtnForgot');
+
+      loginForm.classList.add('hidden');
+      registerForm.classList.add('hidden');
+      forgotForm.classList.add('hidden');
+
+      [btnLogin, btnRegister, btnForgot].forEach(btn => {
+        btn.className = "flex-1 py-2 text-xs font-semibold rounded-xl transition duration-200 text-white/60 hover:text-white";
+      });
+
+      if (type === 'login') {
+        loginForm.classList.remove('hidden');
+        btnLogin.className = "flex-1 py-2 text-xs font-semibold rounded-xl transition duration-200 bg-white/20 text-white shadow-sm backdrop-blur-lg";
+      } else if (type === 'register') {
+        registerForm.classList.remove('hidden');
+        btnRegister.className = "flex-1 py-2 text-xs font-semibold rounded-xl transition duration-200 bg-white/20 text-white shadow-sm backdrop-blur-lg";
+      } else if (type === 'forgot') {
+        forgotForm.classList.remove('hidden');
+        btnForgot.className = "flex-1 py-2 text-xs font-semibold rounded-xl transition duration-200 bg-white/20 text-white shadow-sm backdrop-blur-lg";
+      }
+    }
+
+    // --- Password visibility toggle ---
+    function togglePassVisibility(inputId, iconId) {
+      AppleAudio.playClick();
+      const input = document.getElementById(inputId);
+      const icon = document.getElementById(iconId);
+      if (input.type === 'password') {
+        input.type = 'text';
+        icon.className = 'fa-regular fa-eye-slash';
+      } else {
+        input.type = 'password';
+        icon.className = 'fa-regular fa-eye';
+      }
+    }
+
+    // --- OTP Simulator ---
+    function sendOtpSimulator(btn) {
+      AppleAudio.playClick();
+      btn.disabled = true;
+      let count = 45;
+      btn.innerText = `${count}s`;
+      showToast("OTP sent to +91 mobile: 784912", true);
+      triggerDynamicIsland('SMS OTP: 784912');
+      const interval = setInterval(() => {
+        count--;
+        if (count <= 0) {
+          clearInterval(interval);
+          btn.disabled = false;
+          btn.innerText = "Resend OTP";
+        } else {
+          btn.innerText = `${count}s`;
+        }
+      }, 1000);
+    }
+
+    // --- Auth Submission Handlers ---
+    function handleLogin(e) {
+      e.preventDefault();
+      const phone = document.getElementById('loginPhone').value.trim();
+      const pass = document.getElementById('loginPassword').value;
+
+      if (phone.length !== 10) {
+        showToast("Enter a valid 10-digit mobile number", false);
+        return;
+      }
+      if (!pass || pass.length < 4) {
+        showToast("Please enter valid password", false);
+        return;
+      }
+
+      appState.isLoggedIn = true;
+      appState.user.phone = phone;
+      updateUI();
+
+      document.getElementById('authSection').classList.add('hidden');
+      document.getElementById('appPagesSection').classList.remove('hidden');
+      document.getElementById('bottomNav').classList.remove('hidden');
+      switchTab('home');
+
+      showToast("Welcome to Apple Liquid Agriculture", true);
+      triggerDynamicIsland('Biometric Node Active', 'fa-solid fa-fingerprint');
+    }
+
+    function handleRegister(e) {
+      e.preventDefault();
+      const phone = document.getElementById('regPhone').value.trim();
+      const pass = document.getElementById('regPassword').value;
+      const cpass = document.getElementById('regConfirmPassword').value;
+
+      if (phone.length !== 10) {
+        showToast("Please enter 10-digit mobile number", false);
+        return;
+      }
+      if (pass !== cpass) {
+        showToast("Passwords do not match", false);
+        return;
+      }
+
+      appState.isLoggedIn = true;
+      appState.user.phone = phone;
+      appState.user.balance = 50.00;
+      updateUI();
+
+      document.getElementById('authSection').classList.add('hidden');
+      document.getElementById('appPagesSection').classList.remove('hidden');
+      document.getElementById('bottomNav').classList.remove('hidden');
+      switchTab('home');
+
+      showToast("Registration Complete! ₹50 Bonus Credited.", true);
+      triggerDynamicIsland('+₹50 Welcome Bonus', 'fa-solid fa-gift');
+    }
+
+    function handleForgot(e) {
+      e.preventDefault();
+      showToast("Password reset successfully! Please login.", true);
+      switchAuthTab('login');
+    }
+
+    function handleLogout() {
+      AppleAudio.playClick();
+      appState.isLoggedIn = false;
+      document.getElementById('authSection').classList.remove('hidden');
+      document.getElementById('appPagesSection').classList.add('hidden');
+      document.getElementById('bottomNav').classList.add('hidden');
+      switchAuthTab('login');
+      showToast("Session disconnected.", true);
+    }
+
+    // --- Main App Navigation Switcher ---
+    function switchTab(tab) {
+      AppleAudio.playClick();
+      const pages = ['pageHome', 'pageMarket', 'pageOrders', 'pageTeam', 'pageMine'];
+      const navs = ['navHome', 'navMarket', 'navOrders', 'navTeam', 'navMine'];
+
+      pages.forEach(p => document.getElementById(p).classList.add('hidden'));
+      navs.forEach(n => {
+        const el = document.getElementById(n);
+        el.className = "flex flex-col items-center flex-1 text-white/45 hover:text-white font-medium transition py-1";
+      });
+
+      const activePageId = 'page' + tab.charAt(0).toUpperCase() + tab.slice(1);
+      const activeNavId = 'nav' + tab.charAt(0).toUpperCase() + tab.slice(1);
+
+      document.getElementById(activePageId).classList.remove('hidden');
+      const activeNav = document.getElementById(activeNavId);
+      activeNav.className = "flex flex-col items-center flex-1 text-emerald-400 font-bold transition py-1";
+
+      document.getElementById('mainContent').scrollTop = 0;
+    }
+
+    // --- Daily Sign-in / Check-in ---
+    function dailyCheckIn() {
+      const btn = document.getElementById('checkInBtn');
+      if (btn.classList.contains('opacity-50')) {
+        showToast("You have already claimed today's sign-in bonus!", false);
+        return;
+      }
+      appState.user.balance += 20.00;
+      appState.transactions.unshift({
+        type: 'Bonus',
+        title: 'Daily Farmer Attendance Bonus',
+        amount: '+₹20.00',
+        time: 'Just Now',
+        status: 'Credited'
+      });
+      updateUI();
+      renderTransactions();
+      btn.classList.add('opacity-50');
+      btn.innerHTML = `<i class="fa-solid fa-check"></i><span>Claimed</span>`;
+      showToast("₹20.00 Daily Attendance Bonus Credited!", true);
+      triggerDynamicIsland('+₹20 Daily Bonus', 'fa-solid fa-gift');
+    }
+
+    // --- Render Products List (Apple Liquid Glass Cards) ---
+    function renderProducts(filter = 'all') {
+      const catalog = document.getElementById('productsCatalog');
+      const homeList = document.getElementById('homeProductsList');
+      catalog.innerHTML = '';
+      homeList.innerHTML = '';
+
+      const filtered = appState.products.filter(p => filter === 'all' || p.category === filter);
+
+      filtered.forEach((item, index) => {
+        const cardHtml = `
+          <div class="liquid-glass-card rounded-3xl p-4 border border-white/10 hover:border-emerald-400/40 transition">
+            <div class="flex items-center justify-between mb-2.5">
+              <span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full ${item.badge.includes('VIP') ? 'bg-amber-400/20 text-amber-300 border border-amber-400/30' : 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30'}">
+                ${item.badge}
+              </span>
+              <span class="text-xs font-mono text-white/50">Yield: ${item.days} Days</span>
+            </div>
+
+            <div class="flex items-center space-x-3 mb-3">
+              <div class="w-12 h-12 rounded-2xl liquid-glass text-emerald-400 flex items-center justify-center text-xl border border-white/20">
+                <i class="fa-solid ${item.icon}"></i>
+              </div>
+              <div class="flex-1">
+                <h4 class="text-sm font-bold text-white">${item.name}</h4>
+                <p class="text-[11px] text-white/50">${item.tag}</p>
+              </div>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="grid grid-cols-3 gap-1 liquid-glass rounded-2xl p-2.5 text-center mb-3 border border-white/10">
+              <div>
+                <span class="text-[9px] text-white/40 font-bold uppercase">Price</span>
+                <p class="text-sm font-black text-white font-mono">₹${item.price.toLocaleString()}</p>
+              </div>
+              <div>
+                <span class="text-[9px] text-white/40 font-bold uppercase">Daily</span>
+                <p class="text-sm font-black text-emerald-400 font-mono">+₹${item.dailyIncome.toFixed(2)}</p>
+              </div>
+              <div>
+                <span class="text-[9px] text-white/40 font-bold uppercase">Total</span>
+                <p class="text-sm font-black text-amber-300 font-mono">₹${item.totalReturn.toLocaleString()}</p>
+              </div>
+            </div>
+
+            <!-- Progress & Buy -->
+            <div class="flex items-center justify-between space-x-3">
+              <div class="flex-1">
+                <div class="flex justify-between text-[10px] text-white/50 font-mono mb-1">
+                  <span>Subscribed: ${item.salesProgress}%</span>
+                  <span class="text-emerald-400">High Demand</span>
+                </div>
+                <div class="w-full bg-white/10 h-1.5 rounded-full overflow-hidden">
+                  <div class="bg-gradient-to-r from-emerald-400 to-cyan-400 h-full rounded-full" style="width: ${item.salesProgress}%"></div>
+                </div>
+              </div>
+              <button onclick="investProduct(${item.id})" class="px-4 py-2 glass-btn-primary text-white font-extrabold text-xs rounded-xl shadow-md transition active:scale-95 whitespace-nowrap">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        `;
+
+        catalog.insertAdjacentHTML('beforeend', cardHtml);
+
+        if (index < 3) {
+          homeList.insertAdjacentHTML('beforeend', cardHtml);
+        }
+      });
+    }
+
+    // --- Product Category Filter ---
+    function filterProducts(cat, btn) {
+      AppleAudio.playClick();
+      document.querySelectorAll('.category-filter').forEach(b => {
+        b.className = "px-4 py-2 text-xs font-medium rounded-xl liquid-glass text-white/70 hover:text-white whitespace-nowrap category-filter";
+      });
+      btn.className = "px-4 py-2 text-xs font-bold rounded-xl bg-white/20 text-white whitespace-nowrap shadow-sm category-filter border border-white/20";
+      renderProducts(cat);
+    }
+
+    // --- Invest Product Action ---
+    function investProduct(id) {
+      const product = appState.products.find(p => p.id === id);
+      if (!product) return;
+
+      if (appState.user.balance < product.price) {
+        showToast(`Insufficient balance! Please recharge ₹${product.price - appState.user.balance} more.`, false);
+        openRechargeModal();
+        setRechargeAmount(product.price);
+        return;
+      }
+
+      appState.user.balance -= product.price;
+      const newOrder = {
+        id: 'ORD-' + Math.floor(1000 + Math.random() * 9000),
+        productId: product.id,
+        name: product.name,
+        invested: product.price,
+        dailyIncome: product.dailyIncome,
+        daysRemaining: product.days,
+        totalDays: product.days,
+        pendingClaim: product.dailyIncome,
+        lastHarvest: 'Pending'
+      };
+
+      appState.orders.unshift(newOrder);
+      appState.transactions.unshift({
+        type: 'Plan Buy',
+        title: `Seed Plan: ${product.name}`,
+        amount: `-₹${product.price.toLocaleString()}`,
+        time: 'Just Now',
+        status: 'Completed'
+      });
+
+      updateUI();
+      renderOrders();
+      renderTransactions();
+      showToast(`Success! Invested in ${product.name}`, true);
+      triggerDynamicIsland(`Activated: ${product.name.slice(0, 15)}...`, 'fa-solid fa-leaf');
+      switchTab('orders');
+    }
+
+    function quickInvestProduct(index) {
+      if (appState.products[index]) {
+        investProduct(appState.products[index].id);
+      }
+    }
+
+    // --- Render Orders List ---
+    function renderOrders() {
+      const container = document.getElementById('ordersList');
+      const badge = document.getElementById('orderBadgeCount');
+      container.innerHTML = '';
+
+      badge.innerText = appState.orders.length;
+
+      let totalInvest = 0;
+      let totalPending = 0;
+
+      if (appState.orders.length === 0) {
+        container.innerHTML = `
+          <div class="liquid-glass-card rounded-3xl p-6 text-center border border-white/10">
+            <i class="fa-solid fa-seedling text-4xl text-white/30 mb-2"></i>
+            <p class="text-xs font-bold text-white">No active crop contracts</p>
+            <p class="text-[11px] text-white/50 mt-0.5">Explore our high yield smart seeds and start harvesting daily returns!</p>
+            <button onclick="switchTab('market')" class="mt-3 px-4 py-2 glass-btn-primary text-white rounded-xl text-xs font-bold">
+              Browse Seeds
+            </button>
+          </div>
+        `;
+        document.getElementById('totalActiveInvestAmount').innerText = '₹0.00';
+        document.getElementById('pendingHarvestAmount').innerText = '₹0.00';
+        return;
+      }
+
+      appState.orders.forEach((ord, index) => {
+        totalInvest += ord.invested;
+        totalPending += ord.pendingClaim;
+
+        const html = `
+          <div class="liquid-glass-card rounded-3xl p-4 border border-white/10 space-y-2.5">
+            <div class="flex items-center justify-between">
+              <div>
+                <span class="text-[10px] text-emerald-300 font-mono font-bold">${ord.id}</span>
+                <h4 class="text-sm font-bold text-white">${ord.name}</h4>
+              </div>
+              <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-[10px] font-bold px-2 py-0.5 rounded-full font-mono">
+                Active Crop
+              </span>
+            </div>
+
+            <div class="grid grid-cols-3 gap-2 liquid-glass p-2.5 rounded-2xl text-center text-xs border border-white/10">
+              <div>
+                <span class="text-[9px] text-white/40 font-bold uppercase">Invested</span>
+                <p class="font-extrabold text-white font-mono">₹${ord.invested}</p>
+              </div>
+              <div>
+                <span class="text-[9px] text-white/40 font-bold uppercase">Daily Yield</span>
+                <p class="font-extrabold text-emerald-400 font-mono">+₹${ord.dailyIncome.toFixed(2)}</p>
+              </div>
+              <div>
+                <span class="text-[9px] text-white/40 font-bold uppercase">Cycle Left</span>
+                <p class="font-extrabold text-amber-300 font-mono">${ord.daysRemaining}d</p>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between pt-1">
+              <div class="text-[11px] text-white/60">
+                Harvest Unlocked: <b class="text-emerald-400 font-mono">₹${ord.pendingClaim.toFixed(2)}</b>
+              </div>
+              <button onclick="claimSingleOrder(${index})" class="px-3.5 py-1.5 glass-btn-primary text-white rounded-xl text-xs font-bold active:scale-95 transition">
+                Collect Harvest
+              </button>
+            </div>
+          </div>
+        `;
+        container.insertAdjacentHTML('beforeend', html);
+      });
+
+      document.getElementById('totalActiveInvestAmount').innerText = `₹${totalInvest.toLocaleString()}`;
+      document.getElementById('pendingHarvestAmount').innerText = `₹${totalPending.toFixed(2)}`;
+    }
+
+    // --- Claim Profits ---
+    function claimSingleOrder(index) {
+      const ord = appState.orders[index];
+      if (!ord || ord.pendingClaim <= 0) {
+        showToast("Crop harvest already claimed today!", false);
+        return;
+      }
+      const amount = ord.pendingClaim;
+      appState.user.balance += amount;
+      appState.user.todayEarnings += amount;
+      ord.pendingClaim = 0;
+
+      appState.transactions.unshift({
+        type: 'Harvest',
+        title: `Harvest Yield: ${ord.name}`,
+        amount: `+₹${amount.toFixed(2)}`,
+        time: 'Just Now',
+        status: 'Collected'
+      });
+
+      updateUI();
+      renderOrders();
+      renderTransactions();
+      showToast(`+₹${amount.toFixed(2)} Harvest profit credited to balance!`, true);
+      triggerDynamicIsland(`+₹${amount.toFixed(2)} Harvested`, 'fa-solid fa-wheat-awn');
+    }
+
+    function harvestAllProfits() {
+      let claimedSum = 0;
+      appState.orders.forEach(ord => {
+        claimedSum += ord.pendingClaim;
+        ord.pendingClaim = 0;
+      });
+
+      if (claimedSum <= 0) {
+        showToast("No pending harvest yield to collect right now.", false);
+        return;
+      }
+
+      appState.user.balance += claimedSum;
+      appState.user.todayEarnings += claimedSum;
+
+      appState.transactions.unshift({
+        type: 'Harvest',
+        title: 'Bulk Agriculture Crop Harvest',
+        amount: `+₹${claimedSum.toFixed(2)}`,
+        time: 'Just Now',
+        status: 'Collected'
+      });
+
+      updateUI();
+      renderOrders();
+      renderTransactions();
+      showToast(`Harvested ₹${claimedSum.toFixed(2)} total returns!`, true);
+      triggerDynamicIsland(`+₹${claimedSum.toFixed(2)} All Crops Harvested`, 'fa-solid fa-wheat-awn');
+    }
+
+    // --- Render Transactions ---
+    function renderTransactions() {
+      const container = document.getElementById('historyItemsList');
+      container.innerHTML = '';
+
+      appState.transactions.forEach(t => {
+        const isPositive = t.amount.startsWith('+');
+        const html = `
+          <div class="p-3 liquid-glass rounded-2xl border border-white/10 flex items-center justify-between">
+            <div class="flex items-center space-x-2.5">
+              <div class="w-8 h-8 rounded-xl ${isPositive ? 'bg-emerald-500/20 text-emerald-400' : 'bg-rose-500/20 text-rose-400'} flex items-center justify-center text-xs font-bold border border-white/10">
+                <i class="fa-solid ${isPositive ? 'fa-arrow-down' : 'fa-arrow-up'}"></i>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-white">${t.title}</p>
+                <p class="text-[10px] text-white/40">${t.time}</p>
+              </div>
+            </div>
+            <div class="text-right">
+              <p class="text-xs font-black font-mono ${isPositive ? 'text-emerald-400' : 'text-white'}">${t.amount}</p>
+              <span class="text-[9px] font-semibold text-emerald-300 bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/20">${t.status}</span>
+            </div>
+          </div>
+        `;
+        container.insertAdjacentHTML('beforeend', html);
+      });
+    }
+
+    // --- Update Dynamic Text across UI ---
+    function updateUI() {
+      const formattedBalance = isBalanceHidden ? '••••••' : appState.user.balance.toFixed(2);
+      const maskedPhone = '+91 ' + appState.user.phone.slice(0, 5) + '*****';
+
+      document.getElementById('userBalanceText').innerText = formattedBalance;
+      document.getElementById('profileBalanceText').innerText = formattedBalance;
+      document.getElementById('modalWithdrawableBalance').innerText = `₹${appState.user.balance.toFixed(2)}`;
+      document.getElementById('userTodayEarnings').innerText = appState.user.todayEarnings.toFixed(2);
+
+      document.getElementById('userDisplayPhone').innerText = maskedPhone;
+      document.getElementById('profilePhone').innerText = '+91 ' + appState.user.phone;
+      document.getElementById('profileUid').innerText = appState.user.uid;
+
+      document.getElementById('bankBindingStatus').innerText = `${appState.user.bank.name} (***${appState.user.bank.acc.slice(-4)})`;
+      document.getElementById('withdrawBankName').innerText = appState.user.bank.name;
+      document.getElementById('withdrawBankAcc').innerText = `A/C: *******${appState.user.bank.acc.slice(-4)} (${appState.user.bank.ifsc})`;
+    }
+
+    // --- Modals Controller ---
+    function openModal(id) {
+      AppleAudio.playClick();
+      document.getElementById(id).classList.remove('hidden');
+    }
+    function closeModal(id) {
+      AppleAudio.playClick();
+      document.getElementById(id).classList.add('hidden');
+    }
+
+    function openRechargeModal() { openModal('rechargeModal'); }
+    function openWithdrawModal() { openModal('withdrawModal'); }
+    function openBankDetailsModal() { openModal('bankDetailsModal'); }
+    function openHistoryModal() { openModal('historyModal'); }
+    function openLiveSupport() { openModal('supportModal'); }
+    function openAboutModal() { openModal('aboutModal'); }
+
+    // --- Recharge Helpers ---
+    function setRechargeAmount(amt) {
+      AppleAudio.playClick();
+      document.getElementById('customRechargeInput').value = amt;
+    }
+
+    function processRechargeSubmit() {
+      const amount = parseFloat(document.getElementById('customRechargeInput').value);
+      if (isNaN(amount) || amount < 500) {
+        showToast("Minimum recharge amount is ₹500", false);
+        return;
+      }
+
+      appState.user.balance += amount;
+      appState.transactions.unshift({
+        type: 'Recharge',
+        title: `Apple UPI Deposit`,
+        amount: `+₹${amount.toLocaleString()}`,
+        time: 'Just Now',
+        status: 'Success'
+      });
+
+      updateUI();
+      renderTransactions();
+      closeModal('rechargeModal');
+      showToast(`Deposit Successful! ₹${amount.toLocaleString()} added.`, true);
+      triggerDynamicIsland(`+₹${amount.toLocaleString()} Deposit Confirmed`, 'fa-solid fa-wallet');
+    }
+
+    // --- Withdrawal Submission ---
+    function processWithdrawSubmit() {
+      const amt = parseFloat(document.getElementById('withdrawAmountInput').value);
+      const pass = document.getElementById('withdrawPasswordInput').value;
+
+      if (isNaN(amt) || amt < 200) {
+        showToast("Minimum withdrawal is ₹200", false);
+        return;
+      }
+
+      if (amt > appState.user.balance) {
+        showToast("Requested amount exceeds available balance", false);
+        return;
+      }
+
+      if (!pass) {
+        showToast("Please enter transaction password", false);
+        return;
+      }
+
+      const fee = amt * 0.10;
+      const net = amt - fee;
+
+      appState.user.balance -= amt;
+      appState.transactions.unshift({
+        type: 'Withdraw',
+        title: `Settlement (${appState.user.bank.name})`,
+        amount: `-₹${amt.toFixed(2)}`,
+        time: 'Just Now',
+        status: 'Processing (IMPS)'
+      });
+
+      updateUI();
+      renderTransactions();
+      closeModal('withdrawModal');
+      document.getElementById('withdrawAmountInput').value = '';
+      document.getElementById('withdrawPasswordInput').value = '';
+      showToast(`Withdrawal of ₹${amt.toFixed(2)} submitted! Net ₹${net.toFixed(2)} after TDS.`, true);
+      triggerDynamicIsland(`-₹${amt.toFixed(2)} IMPS Settlement Dispatched`, 'fa-solid fa-building-columns');
+    }
+
+    // --- Save Bank Details ---
+    function saveBankDetails() {
+      const holder = document.getElementById('bankHolderInput').value.trim();
+      const name = document.getElementById('bankNameInput').value.trim();
+      const acc = document.getElementById('bankAccInput').value.trim();
+      const ifsc = document.getElementById('bankIfscInput').value.trim();
+
+      if (!holder || !name || !acc || !ifsc) {
+        showToast("Please fill all bank card details", false);
+        return;
+      }
+
+      appState.user.bank = { holder, name, acc, ifsc };
+      updateUI();
+      closeModal('bankDetailsModal');
+      showToast("Bank details successfully bound and verified!", true);
+      triggerDynamicIsland('Bank Node Verified', 'fa-solid fa-circle-check');
+    }
+
+    // --- Copy to Clipboard fallback ---
+    function copyToClipboard(text, successMsg = 'Copied to clipboard!') {
+      AppleAudio.playClick();
+      const dummy = document.createElement("textarea");
+      document.body.appendChild(dummy);
+      dummy.value = text;
+      dummy.select();
+      try {
+        document.execCommand('copy');
+        showToast(successMsg, true);
+        triggerDynamicIsland('Clipboard Synchronized', 'fa-solid fa-copy');
+      } catch (err) {
+        showToast("Unable to copy", false);
+      }
+      document.body.removeChild(dummy);
+    }
+
+    // --- Live Support Chat Bot Simulator ---
+    function sendSupportMessage() {
+      const input = document.getElementById('supportInput');
+      const text = input.value.trim();
+      if (!text) return;
+
+      AppleAudio.playClick();
+      const container = document.getElementById('supportChatMessages');
+      container.innerHTML += `
+        <div class="glass-btn-primary text-white p-2.5 rounded-2xl rounded-tr-none max-w-[85%] ml-auto text-right font-medium">
+          ${text}
+        </div>
+      `;
+      input.value = '';
+      container.scrollTop = container.scrollHeight;
+
+      setTimeout(() => {
+        let reply = "Our Apple smart agriculture concierge is monitoring your node telemetry. Recharges and withdrawals are synchronized 24/7 across all IMPS corridors.";
+        const lower = text.toLowerCase();
+        if (lower.includes('recharge') || lower.includes('deposit')) {
+          reply = "For instant deposits, tap 'Recharge', choose an amount (Min ₹500), and approve via Apple UPI-1 or QR scan.";
+        } else if (lower.includes('withdraw')) {
+          reply = "Withdrawals are processed 09:30 AM to 06:30 PM with instant IMPS dispatch and 10% standard TDS.";
+        } else if (lower.includes('seed') || lower.includes('plan')) {
+          reply = "Check out our high-demand Kaveri Bio-Hybrid Cotton and Smart Maize seeds under the 'Market' tab for maximum daily yield!";
+        }
+
+        container.innerHTML += `
+          <div class="liquid-glass text-white/90 p-3 rounded-2xl rounded-tl-none max-w-[85%] font-medium border border-white/10">
+            ${reply}
+          </div>
+        `;
+        container.scrollTop = container.scrollHeight;
+        AppleAudio.playChime();
+      }, 700);
+    }
+
+    function openTelegramChannel() {
+      showToast("Redirecting to Official Telegram Agri Community...", true);
+    }
+
+    function toggleSound() {
+      showToast("Notifications active", true);
+    }
+  </script>
+</body>
+</html>
